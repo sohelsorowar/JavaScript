@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions telusko</title>
+    
+    <script type="text/javascript">
+
+        function addN(a,b)
+        {
+            var total= a+b;
+            return total;
+           
+        }
+        output = addN(4,3)
+        document.write("<h1> this is funtion: "+output+"</h1>");
+    
+//variable local / global
+
+
+        var b = 6; //global variable
+        function myFun()
+        {
+            var a = 5; // local variable
+            document.write("<h2>"+a+"</h2>");
+            document.write("<h2>"+b+"</h2>");
+        }
+        myFun();
+
+    </script>
+  </head>
+  <body></body>
+</html>
