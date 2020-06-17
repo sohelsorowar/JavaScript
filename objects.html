@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obejects</title>
+
+    <script type="text/javascript">
+
+
+        var Car = {
+            carBrand:"Tesla",
+            carModel:"Model3",
+            carPrice:"35000usd",
+
+            teslaAutoPailot: function()
+             {
+                document.write("<h2> This car has autopailot</h2>");
+            }
+        }
+        document.write("<h2>"+Car.carBrand+"</h2>");
+        document.write("<h2>"+Car.carModel+"</h2>");
+        document.write("<h2>"+Car.carPrice+"</h2>");
+        document.write("<h2>"+Car.teslaAutoPailot()+"</h2>");
+        Car.teslaAutoPailot();
+
+
+        //constructor function
+
+        function Cars(car_brand,car_model,car_price){
+
+            this.car_brand = car_brand;
+            this.car_model = car_model;
+            this.car_price = car_price;
+            this.teslaAutoPailot2 = function()
+            {
+                document.write("<h2> This car has autopailot2 (using constructor)</h2>");
+            }
+        }
+
+        var c1 = new Cars("tesla","model x", 3500);
+        var c2 = new Cars("tesla","model p", 4500);
+        c1.teslaAutoPailot2();
+        document.write("<h1>"+c2.car_model)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
