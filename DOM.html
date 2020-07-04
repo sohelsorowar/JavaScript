@@ -19,16 +19,103 @@
           alert("Value is :" + str);
         }
       }
+
+      function funR()
+      {
+
+        var rd1 = document.getElementById("rd1");
+        var rd2 = document.getElementById("rd2");
+
+        if(rd1.checked==true)
+          alert("the channel sellected is: "+rd1.value);
+        else if(rd2.checked==true)
+          alert("the channel sellected is: "+rd2.value);
+        else
+          alert("no channel selected");
+      }
+      function funD()
+      {
+        var select = document.getElementById("selectbox");
+        alert(select.options[select.selectedIndex].value)
+      }
+
+
+      function changeStyle()
+      {
+        var para = document.getElementsByTagName("p");
+        para[0].style.color ="red";
+        para[1].style.fontSize=25;
+        para[2].style.fontWeight="bold";
+        para[3].style.fontStyle="italic";
+
+        /*we can also use loop for changing all paragaph
+        
+        for(var i=0;i<para.length;i++)
+        {
+          para[i].style.color="red";
+        }
+        
+        */
+      }
+
+      function changeStyleC()
+      {
+        var element = document.getElementsByClassName("b");
+
+        for( x=0;x<element.length;x++)
+        {
+          element[x].style.color="blue";
+        }
+      }
+
+      
+
     </script>
   </head>
-  <body>
+  
+  
+  
     <button onclick="buttonClick()">Punch Me</button>
     <h2 id="heading2">Some Random text</h2>
 
-    // input users data
+    
     <input id="text1" placeholder="username" />
     <br />
     <input id="text2" type="password" placeholder="password" />
     <button onclick="fn1()" id="btn1">Punch Me</button>
-  </body>
+    <br>
+    <input id = "rd1" name="S" type="radio" value="sohel">Sohel</>
+    <br>
+    <input id = "rd2" name="S" type="radio" value="sorowar">Sorowar</input>
+    <br>
+    <button onclick="funR()" id="btn1">Click me</button>
+
+    <br>
+    <br>
+    <br>
+    <select id="selectbox">
+      <option value="A1">Sohel Sorowar</option>
+      <option value="A2">A2</option>
+      <option value="A3">A3</option>
+    </select>
+    <br>
+    <button onclick="funD()">Click Me</button>
+    
+    <br>
+    <br>
+    <br>
+    <body>
+      <h1>Styling with css</h1>
+      <p>This is paragraph styling tag1</p>
+      <p class="b">This is paragraph styling tag2</p>
+      <p>This is paragraph styling tag3</p>
+      <p class="b">This is paragraph styling tag4</p>
+      <br>
+      <button onclick="changeStyle()">Change Style by tag</button>
+      <button onclick="changeStyleC()">Change Style by class</button>
+    </body>
+     
+    
+  
+  
 </html>
