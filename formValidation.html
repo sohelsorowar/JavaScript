@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+
+    <script>
+
+        function validate()
+        {
+            var username = document.getElementById("uname");
+            var password = document.getElementById("pass");
+
+            if(username.value.trim() =="" || password.value.trim()=="")
+            {
+                alert("No blank values are allowed");
+                return false;
+            }
+            else
+            {
+                true;
+            }
+        }
+
+
+        function validate1()
+        {
+            var username1 = document.getElementById("uname1");
+            var password1 = document.getElementById("pass1");
+
+            if(username1.value.trim() =="")
+            {
+              //  alert("Blank user name");
+                username1.style.border="solid 2px red";
+                document.getElementById("lbluser").style.visibility="visible";
+                return false;
+            }
+            else if(password1.value.trim()=="")
+            {
+                //alert("Blank pass");
+                password1.style.border="solid 2px red";
+                return false;
+            }
+            else if(password1.value.trim().length<5)
+            {
+               // alert("password too short");
+                password1.style.border="solid 2px red";
+                document.getElementById("lblpass").style.visibility="visible";
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <form onsubmit="return validate()" action="image.html">
+        
+        <input id="uname" placeholder="User Name" type="text" required><br><br>
+        <input id="pass" placeholder="Password" type="password" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    
+    
+    </form>
+    <br>
+    <h1>More advanced form validation</h1>
+    <br>
+    <form onsubmit="return validate1()" action="image.html">
+        <input id="uname1" placeholder="User Name" type="text" >
+        <Label id="lbluser" style="color: red; visibility: hidden;">Empty</Label>
+        <br><br>
+        <input id="pass1" placeholder="Password" type="password" >
+        <Label id="lblpass" style="color: red; visibility: hidden;">password ve to be more than 5 charecters.</Label>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
