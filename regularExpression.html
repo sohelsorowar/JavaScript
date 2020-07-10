@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+
+    <script>
+
+        function validate2()
+        {
+            var username = document.getElementById("uname2").value;
+            var regx = /S/;
+            if(regx.test(username))
+            {
+                alert("Valid User name");
+            }
+            else
+            {
+                alert("Invalid User Name");
+                document.getElementById("lbluser").style.visibility="visible";
+            }
+        }
+
+        
+    </script>
+
+</head>
+<body>
+    <h1>User name shoud start letter S/s.</h1>
+    <form onsubmit="return validate2()" >
+        <input id="uname2" placeholder="User Name" type="text" >
+        <Label id="lbluser" style="color: red; visibility: hidden;">Empty</Label>
+        <br><br>
+       
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

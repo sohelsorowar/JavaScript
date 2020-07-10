@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Validation</title>
+
+    <script>
+        function validation1()
+        {
+            var text = document.getElementById("text1").value;
+            var regex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+            if(regex.test(text))
+            {
+                document.getElementById("lbltext").innerHTML="valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            }
+            else
+            {
+                document.getElementById("lbltext").innerHTML="invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <form>
+
+        <input id = "text1" placeholder="Email" type="text"><br>
+        <label id="lbltext" style="color: red; visibility: hidden;">Invalid</label>
+        <br>
+        <button onclick="validation1()" type="button" >Submit</button>
+
+        
+
+    </form>
+</body>
+</html>
