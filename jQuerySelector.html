@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Selector up jQuery</h2>
+
+    <div id="firstdiv" class="mydives">
+        <p>This is first paragraaph in first division</p>
+        <p>This is second paragraph in first division</p>
+    </div>
+    <div id="seconddiv" class="mydives">
+        <p>This is third para in second division</p>
+        
+    </div>
+    <div id="thirddiv" class="mydives">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div> 
+    <button onclick="fnx()" id="btn1">Click ME</button>
+</body>
+
+
+<script src="jQuery/jquery.js"></script>
+<script>
+    function fnx(){
+       // $("#firstdiv").fadeToggle(1000);
+       // $("div").fadeToggle(1000);
+       // $("#firstdiv,#seconddiv").fadeToggle(1000);
+      // $("#firstdiv,p").fadeToggle(1000);
+      $("#firstdiv,p,mydives,li").fadeToggle(1000);
+      $("li:odd").fadeToggle(1000);
+    }
+</script>
+</html>
