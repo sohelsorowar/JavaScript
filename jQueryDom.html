@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>jQuery DOm manipulation</h2>
+
+    <button id="btn1">Action</button>
+   
+
+    <div id="div1" class="mydives">
+        <p id="p1" value="hello world">This is first <b>Paragraph</b> in first division</p>
+        
+    </div>  
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+           
+            alert($("#p1").css("font-size"));
+           // alert($("#p1").attr("value"));
+          // alert($("#p1").html());
+           // $("#p1").text("hello world");
+        });
+    });
+  
+</script>
+</html>
