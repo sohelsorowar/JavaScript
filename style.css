@@ -3,3 +3,11 @@
     margin: 5px;
     padding: 10px;
 }
+.newdivclass{
+    border-radius: 10px;
+    background-color: aqua;
+}
+.newparaclass{
+    font-weight: blod;
+    color: brown;
+}

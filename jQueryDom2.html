@@ -16,6 +16,10 @@
     <button id="btn4">before</button>
     <button id="btn5">Remove</button>
     <button id="btn6">Empty</button>
+    <button id="btn7">AddClass</button>
+    <button id="btn8">Remove Class</button>
+    <button id="btn9">Toggle Class</button>
+    <button id="btn10">CSS</button>
    
 
     <div id="div1" class="mydives">
@@ -49,8 +53,19 @@
            
         });
         $("#btn6").click(function(){          
-            $("#div1").empty();
-           
+            $("#div1").empty();          
+        });
+        $("#btn7").click(function(){          
+            $("#div1").addClass("newdivclass newparaclass");          
+        });
+        $("#btn8").click(function(){          
+            $("#div1").removeClass("newdivclass");          
+        });
+        $("#btn9").click(function(){          
+            $("#div1").toggleClass("newdivclass newparaclass");          
+        });
+        $("#btn10").click(function(){          
+            $("#div1").css("font-size","25px");          
         });
     
     });
