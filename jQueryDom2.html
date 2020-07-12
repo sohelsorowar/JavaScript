@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>jQuery DOm manipulation</h2>
+
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">prepend</button>
+    <button id="btn4">before</button>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+   
+
+    <div id="div1" class="mydives">
+        <p id="p1" value="hello world">This is first <b>Paragraph</b> in first division</p>
+        <p id="p2" class="p2class">This is second <b>Paragraph</b> in first division</p>
+        
+    </div>  
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){          
+            $("#div1").append("<p>This is 2nd para by clicking append.</p>");
+           
+        });
+        $("#btn2").click(function(){          
+            $("#div1").after("<p>This is 2nd para by clicking append.</p>");
+           
+        });
+        $("#btn3").click(function(){          
+            $("#div1").prepend("<p>This is 2nd para by clicking append.</p>");
+           
+        });
+        $("#btn4").click(function(){          
+            $("#div1").before("<p>This is 2nd para by clicking append.</p>");
+           
+        });
+        $("#btn5").click(function(){          
+           // $("#div1").remove();
+           $("p").remove("#p2,#p1");
+           
+        });
+        $("#btn6").click(function(){          
+            $("#div1").empty();
+           
+        });
+    
+    });
+  
+</script>
+</html>
