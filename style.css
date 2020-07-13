@@ -11,3 +11,8 @@
     font-weight: blod;
     color: brown;
 }
+#mydiv{
+    border: 2px solid blue;
+    margin: 5px;
+    padding: 10px;
+}
