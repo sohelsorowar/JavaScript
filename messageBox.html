@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to jqueryUI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuery/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jQuery/jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQuery/jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+  <h2>Message Box in jQuery</h2>
+  <div id="firstdiv" class="mydivs">
+      <h3>Welcome to Message Box</h3>
+      <button id="btnx">Show Message Box</button>
+  </div>
+
+  <div id="messagebox" title="MessageBox" class="mydivs">
+      <h3>This is the Message Box</h3>
+      <img src="img/a.jpg" alt="" width="200">
+    </br>
+      <button>click Me</button>
+  </div>
+    
+</body>
+<script src="jQuery/jquery.js" type="text/javascript"></script>
+<script src="jQuery/jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script>
+    $("#btnx").click(function(){
+        
+        $("#messagebox").dialog({
+            title: "custom title",
+            draggable: true,
+            resizeble: true,
+            height: 300,
+            width: 300,
+            modal:true,
+
+            buttons:[
+                {
+                    text: "Close",
+                    icon: "ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close");
+                    }
+                },
+                {
+                    text: "Ok",
+                    icon: "ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close");
+                        alert("okay")
+                    }
+                }
+            ]
+        });
+    });
+</script>
+</html>
