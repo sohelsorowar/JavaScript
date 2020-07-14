@@ -26,3 +26,12 @@
     margin: 5px;
     padding: 10px;
 }
+
+.cube{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+}
