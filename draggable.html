@@ -26,7 +26,12 @@
         <img src="img/a.jpg" width="150" alt="">
     </div>
   </div>
-      
+
+  <div id="mydiv5">
+    <div>
+        <img id="resize" src="img/a.jpg" width="150" alt="">
+    </div>
+  </div>
     
 </body>
 <script src="jQuery/jquery.js" type="text/javascript"></script>
@@ -42,5 +47,14 @@
         snapTolerance:50
     });
 
+   
+
+</script>
+<script>
+     $("#resize").resizable({
+         autoHide:true,
+         ghost:true,
+         aspectRatio:true,
+     });
 </script>
 </html>
